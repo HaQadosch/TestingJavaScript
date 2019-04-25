@@ -1,5 +1,5 @@
 /* globals test expect */
-import { sumAsync, substractAsync } from './math'
+import {sumAsync, substractAsync} from './math'
 
 test('sum adds number', async _ => {
   const result = await sumAsync(1, 2)

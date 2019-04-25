@@ -1,5 +1,5 @@
 {
-  "name": "testingjavaScript",
+  "name": "testingjavascript",
   "version": "1.0.0",
   "description": "https://testingjavascript.com",
   "main": "index.js",
@@ -7,9 +7,11 @@
     "flow": "flow",
     "format": "npm run prettier -- --write",
     "jest": "jest",
+    "precommit": "npm run validate",
     "pretest": "rollup -c",
     "prettier": "prettier \"**/*.+(js|jsx|css|less|scss|ts|tsx|graphql)\"",
-    "test": "node --require ./setup_globals.js bundle.js"
+    "test": "node --require ./setup_globals.js bundle.js",
+    "validate": "npm run format && npm run flow"
   },
   "repository": {
     "type": "git",
@@ -37,6 +39,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-flowtype": "^3.6.1",
     "flow-bin": "^0.97.0",
+    "husky": "^2.1.0",
     "jest": "^24.7.1"
   }
 }
