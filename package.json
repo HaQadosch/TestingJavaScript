@@ -1,12 +1,15 @@
 {
-  "name": "TestingJavaScript",
+  "name": "testingjavaScript",
   "version": "1.0.0",
   "description": "https://testingjavascript.com",
   "main": "index.js",
   "scripts": {
+    "flow": "flow",
+    "format": "npm run prettier -- --write",
+    "jest": "jest",
     "pretest": "rollup -c",
-    "test": "node --require ./setup_globals.js bundle.js",
-    "jest": "jest"
+    "prettier": "prettier \"**/*.+(js|jsx|css|less|scss|ts|tsx|graphql)\"",
+    "test": "node --require ./setup_globals.js bundle.js"
   },
   "repository": {
     "type": "git",
@@ -20,15 +23,20 @@
   },
   "homepage": "https://github.com/HaQadosch/TestingJavaScript#readme",
   "dependencies": {
+    "prettier": "^1.17.0",
     "rollup": "^1.10.1"
   },
   "standard": {
-    "globals": [
-      "test",
-      "expect"
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
     ]
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-flowtype": "^3.6.1",
+    "flow-bin": "^0.97.0",
     "jest": "^24.7.1"
   }
 }

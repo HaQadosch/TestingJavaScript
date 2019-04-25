@@ -1,5 +1,5 @@
 /* globals test expect */
-const { sumAsync, substractAsync } = require('./math')
+const {sumAsync, substractAsync} = require('./math')
 
 test('sum adds number', async _ => {
   const result = await sumAsync(1, 2)

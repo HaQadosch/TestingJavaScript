@@ -1,4 +1,4 @@
-global.test = async function test (title, foo) {
+global.test = async function test(title, foo) {
   try {
     await foo()
     console.info(`✔ ${title}`)
@@ -8,9 +8,9 @@ global.test = async function test (title, foo) {
   }
 }
 
-global.expect = function expect (actual) {
+global.expect = function expect(actual) {
   return {
-    toBe (expected) {
+    toBe(expected) {
       if (actual !== expected) {
         throw new Error(`${actual} is not equal to ${expected}`)
       }
