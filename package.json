@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "format": "npm run prettier -- --write",
-    "jest": "jest",
+    "jest": "jest --watch",
     "precommit": "npm run validate",
     "pretest": "rollup -c",
     "prettier": "prettier \"**/*.+(js|jsx|css|less|scss|ts|tsx|graphql)\"",
-    "test": "node --require ./setup_globals.js bundle.js",
+    "test": "nyc riteway src/monkeyPatching.test.js | tap-nirvana",
+    "//test": "node --require ./setup_globals.js bundle.js",
     "validate": "npm run format"
   },
   "repository": {
@@ -38,6 +39,9 @@
     "eslint": "^5.16.0",
     "eslint-plugin-flowtype": "^3.6.1",
     "husky": "^2.1.0",
-    "jest": "^24.7.1"
+    "jest": "^24.7.1",
+    "nyc": "^14.0.0",
+    "riteway": "^6.0.3",
+    "tap-nirvana": "^1.1.0"
   }
 }

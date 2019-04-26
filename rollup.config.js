@@ -1,7 +1,8 @@
 export default {
-  input: 'src/main.js',
+  input: 'src/monkeyPatching.js',
   output: {
-    file: 'bundle.js',
+    file: 'src/monkeyPatching.test.js',
     format: 'cjs'
-  }
+  },
+  external: [ 'riteway' ]
 }
