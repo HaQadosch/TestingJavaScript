@@ -1,5 +1,5 @@
-import { describe } from 'riteway'
-import { thumbWar } from './thumbWar'
+import {describe} from 'riteway'
+import {thumbWar} from './thumbWar'
 
 describe('thumbWar()', async assert => {
   assert({

@@ -1,4 +1,4 @@
-import { getWinner } from './utils'
+import {getWinner} from './utils'
 
 export function thumbWar(playerA, playerB) {
   const numberToWin = 2

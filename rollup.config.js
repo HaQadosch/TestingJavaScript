@@ -4,5 +4,5 @@ export default {
     file: 'src/monkeyPatching.test.js',
     format: 'cjs'
   },
-  external: [ 'riteway' ]
+  external: ['riteway']
 }
