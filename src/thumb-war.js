@@ -6,6 +6,8 @@ function thumbWar(player1, player2) {
   let player2Wins = 0
   while (player1Wins < numberToWin && player2Wins < numberToWin) {
     const winner = utils.getWinner(player1, player2)
+    console.log({ winner });
+
     if (winner === player1) {
       player1Wins++
     } else if (winner === player2) {
