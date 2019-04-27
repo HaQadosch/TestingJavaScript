@@ -1,12 +1,18 @@
-function fn(impl = () => {}) {
-  const mockFn = (...args) => {
-    mockFn.mock.calls.push(args)
-    return impl(...args)
+function foo(implementation = () => { }) {
+  const mockFoo = (...args) => {
+    mockFoo.mock.calls.push(args)
+    return implementation(...args)
   }
-  mockFn.mock = {calls: []}
-  return mockFn
+
+  mockFoo.mock = {
+    calls: []
+  }
+
+  mockFoo.mockImplementation = newImpl => implementation = newImpl
+
+  return mockFoo
 }
 
 module.exports = {
-  getWinner: fn((p1, p2) => p1)
+  getWinner: foo((p1, p2) => p1)
 }
