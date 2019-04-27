@@ -1,3 +1,0 @@
-# TestingJavaScritp
-
-https://testingjavascript.com
