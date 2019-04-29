@@ -1,29 +1,59 @@
 {
-  "name": "testingjavascript",
+  "name": "calculator",
   "version": "1.0.0",
-  "description": "https://testingjavascript.com",
+  "description": "See how to configure Jest and Cypress with React, Babel, and Webpack",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch"
+    "dev": "webpack-serve",
+    "build": "webpack --mode=production",
+    "postbuild": "cp ./public/index.html ./dist/index.html",
+    "start": "serve --no-clipboard --listen 8080 dist",
+    "lint": "eslint .",
+    "format": "prettier \"**/*.js\" --write",
+    "validate": "npm run lint && npm run build",
+    "setup": "npm run setup && npm run validate"
+  },
+  "keywords": [],
+  "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "7.0.0-beta.51",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.51",
+    "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-emotion": "^9.2.4",
+    "css-loader": "^0.28.11",
+    "eslint": "^5.0.1",
+    "eslint-config-kentcdodds": "^14.0.0",
+    "file-loader": "^1.1.11",
+    "jest": "^24.7.1",
+    "prettier": "^1.13.7",
+    "prop-types": "^15.6.2",
+    "serve": "^9.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-serve": "^1.0.4"
+  },
+  "dependencies": {
+    "emotion": "^9.2.4",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-emotion": "^9.2.4",
+    "react-loadable": "^5.4.0",
+    "react-point": "^3.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HaQadosch/TestingJavaScript.git"
+    "url": "git+https://github.com/kentcdodds/jest-cypress-react-babel-webpack.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HaQadosch/TestingJavaScript/issues"
+    "url": "https://github.com/kentcdodds/jest-cypress-react-babel-webpack/issues"
   },
-  "homepage": "https://github.com/HaQadosch/TestingJavaScript#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "create-jest-runner": "^0.5.0",
-    "glob": "^7.1.3",
-    "jest": "^24.7.1"
-  }
+  "homepage": "https://github.com/kentcdodds/jest-cypress-react-babel-webpack#readme"
 }
