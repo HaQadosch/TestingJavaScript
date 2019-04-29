@@ -16,3 +16,4 @@ function foo(implementation = () => { }) {
 module.exports = {
   getWinner: foo((p1, p2) => p1)
 }
+
