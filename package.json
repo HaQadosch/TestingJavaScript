@@ -4,7 +4,6 @@
   "description": "See how to configure Jest and Cypress with React, Babel, and Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "dev": "webpack-serve",
     "build": "webpack --mode=production",
     "postbuild": "cp ./public/index.html ./dist/index.html",
@@ -18,7 +17,7 @@
   "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
   "license": "GPL-3.0",
   "devDependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.0.0-beta.51",
     "@babel/plugin-proposal-class-properties": "7.0.0-beta.51",
     "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.51",
     "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.51",
@@ -31,7 +30,6 @@
     "eslint": "^5.0.1",
     "eslint-config-kentcdodds": "^14.0.0",
     "file-loader": "^1.1.11",
-    "jest": "^24.7.1",
     "prettier": "^1.13.7",
     "prop-types": "^15.6.2",
     "serve": "^9.1.0",
