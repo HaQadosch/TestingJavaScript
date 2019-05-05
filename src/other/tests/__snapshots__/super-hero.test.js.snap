@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return superheros who can fly. 1`] = `
+Array [
+  Object {
+    "name": "Dynaguy",
+    "powers": Array [
+      "disintegration ray",
+      "fly",
+    ],
+  },
+  Object {
+    "name": "Apogee",
+    "powers": Array [
+      "gravity control",
+      "fly",
+    ],
+  },
+  Object {
+    "name": "Jack-Jack",
+    "powers": Array [
+      "shapeshifting",
+      "fly",
+    ],
+  },
+]
+`;
