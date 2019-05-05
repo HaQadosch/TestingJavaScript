@@ -6,8 +6,8 @@ const superHeros = [
   { name: 'Mr. Incredible', powers: ['physical strength'] },
   { name: 'Elastigirl', powers: ['physical stretch'] },
   { name: 'Violet', powers: ['invisibility', 'force fields'] },
-  { name: 'Dash', powers: ['speed'] },
-  { name: 'Jack-Jack', powers: ['shapeshifting', 'fly'] }
+  { name: 'Dash', powers: ['speed'] }
+  // { name: 'Jack-Jack', powers: ['shapeshifting', 'fly'] }
 ]
 
 function getFlyingSuperHeros () {
