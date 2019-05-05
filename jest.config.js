@@ -4,5 +4,9 @@ module.exports = {
     '\\.module\\.css$': 'identity-obj-proxy',
     '\\.css$': require.resolve('./test/style-mock.js')
   },
-  snapshotSerializers: ['jest-emotion']
+  snapshotSerializers: ['jest-emotion'],
+  // Before jest is loaded.
+  setupFiles: [],
+  // After jest is loaded
+  setupFilesAfterEnv: [require.resolve('./test/setup-test.js')]
 }
