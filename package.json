@@ -33,6 +33,7 @@
     "file-loader": "^1.1.11",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
+    "jest-emotion": "^10.0.10",
     "prettier": "^1.13.7",
     "prop-types": "^15.6.2",
     "react-testing-library": "^7.0.0",
@@ -43,6 +44,7 @@
     "webpack-serve": "^1.0.4"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.10",
     "emotion": "^9.2.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
