@@ -1,15 +1,16 @@
 const path = require('path')
 
 module.exports = {
-  testEnvironment: 'jest-environment-jsdom', // 'jest-environment-node'
-  moduleDirectories: ['node_modules', path.join(__dirname, 'src'), 'shared'],
+  testEnvironment: 'jest-environment-jsdom',
+  moduleDirectories: [
+    'node_modules',
+    path.join(__dirname, 'src'),
+    'shared',
+    path.join(__dirname, 'test'),
+  ],
   moduleNameMapper: {
     '\\.module\\.css$': 'identity-obj-proxy',
-    '\\.css$': require.resolve('./test/style-mock.js')
+    '\\.css$': require.resolve('./test/style-mock.js'),
   },
-  snapshotSerializers: ['jest-emotion'],
-  // Before jest is loaded.
-  setupFiles: [],
-  // After jest is loaded
-  setupFilesAfterEnv: [require.resolve('./test/setup-test.js')]
+  setupTestFrameworkScriptFile: require.resolve('./test/setup-tests.js'),
 }

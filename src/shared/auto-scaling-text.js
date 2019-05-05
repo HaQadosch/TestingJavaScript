@@ -30,7 +30,7 @@ class AutoScalingText extends React.Component {
     return (
       <div
         className={styles.autoScalingText}
-        style={{ transform: `scale(${scale},${scale})` }}
+        style={{transform: `scale(${scale},${scale})`}}
         ref={this.node}
       >
         {this.props.children}

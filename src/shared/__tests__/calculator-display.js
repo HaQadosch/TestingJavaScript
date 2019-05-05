@@ -1,8 +1,8 @@
 import React from 'react'
-import { render } from 'react-testing-library'
+import {render} from 'calculator-test-utils'
 import CalculatorDisplay from '../calculator-display'
 
-test('should mount', () => {
-  const { container } = render(<CalculatorDisplay value='0' />)
+test('mounts', () => {
+  const {container} = render(<CalculatorDisplay value="0" />)
   expect(container.firstChild).toMatchSnapshot()
 })
