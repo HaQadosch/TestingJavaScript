@@ -9,7 +9,7 @@ import styles from './calculator.module.css'
 // handle with Jest and many people will want to know :).
 const CalculatorDisplay = loadable({
   loader: () => import('calculator-display').then(mod => mod.default),
-  loading: () => <div style={{height: 120}}>Loading display...</div>,
+  loading: () => <div style={{ height: 120 }}>Loading display...</div>,
 })
 
 class CalculatorKey extends React.Component {
@@ -18,7 +18,7 @@ class CalculatorKey extends React.Component {
     className: PropTypes.string,
   }
   render() {
-    const {onPress, className = '', ...props} = this.props
+    const { onPress, className = '', ...props } = this.props
 
     return (
       <PointTarget onPoint={onPress}>
@@ -60,7 +60,7 @@ class Calculator extends React.Component {
   }
 
   clearLastChar() {
-    const {displayValue} = this.state
+    const { displayValue } = this.state
 
     this.setState({
       displayValue: displayValue.substring(0, displayValue.length - 1) || '0',
@@ -68,7 +68,7 @@ class Calculator extends React.Component {
   }
 
   toggleSign() {
-    const {displayValue} = this.state
+    const { displayValue } = this.state
     const newValue = parseFloat(displayValue) * -1
 
     this.setState({
@@ -77,7 +77,7 @@ class Calculator extends React.Component {
   }
 
   inputPercent() {
-    const {displayValue} = this.state
+    const { displayValue } = this.state
     const currentValue = parseFloat(displayValue)
 
     if (currentValue === 0) return
@@ -91,7 +91,7 @@ class Calculator extends React.Component {
   }
 
   inputDot() {
-    const {displayValue} = this.state
+    const { displayValue } = this.state
 
     if (!/\./.test(displayValue)) {
       this.setState({
@@ -102,7 +102,7 @@ class Calculator extends React.Component {
   }
 
   inputDigit(digit) {
-    const {displayValue, waitingForOperand} = this.state
+    const { displayValue, waitingForOperand } = this.state
 
     if (waitingForOperand) {
       this.setState({
@@ -118,7 +118,7 @@ class Calculator extends React.Component {
   }
 
   performOperation(nextOperator) {
-    const {value, displayValue, operator} = this.state
+    const { value, displayValue, operator } = this.state
     const inputValue = parseFloat(displayValue)
 
     if (value == null) {
@@ -142,7 +142,7 @@ class Calculator extends React.Component {
   }
 
   handleKeyDown = event => {
-    let {key} = event
+    let { key } = event
 
     if (key === 'Enter') key = '='
 
@@ -181,7 +181,7 @@ class Calculator extends React.Component {
   }
 
   render() {
-    const {displayValue} = this.state
+    const { displayValue } = this.state
 
     const clearDisplay = displayValue !== '0'
     const clearText = clearDisplay ? 'C' : 'AC'
