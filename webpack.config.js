@@ -4,10 +4,10 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve('dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   resolve: {
-    modules: ['node_modules', path.join(__dirname, 'src'), 'shared'],
+    modules: ['node_modules', path.join(__dirname, 'src'), 'shared']
   },
   module: {
     rules: [
