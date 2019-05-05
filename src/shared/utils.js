@@ -1,7 +1,7 @@
-function getFormattedValue(value, language = 'en-US') {
+function getFormattedValue (value, language = 'en-US') {
   let formattedValue = parseFloat(value).toLocaleString(language, {
     useGrouping: true,
-    maximumFractionDigits: 6,
+    maximumFractionDigits: 6
   })
 
   // Add back missing .0 in e.g. 12.0
@@ -13,4 +13,4 @@ function getFormattedValue(value, language = 'en-US') {
   return formattedValue
 }
 
-export {getFormattedValue}
+export { getFormattedValue }
