@@ -1,6 +1,7 @@
 import React from 'react'
 import { FavoriteNumber } from '../favorite-number';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import user from "@testing-library/user-event";
 import '@testing-library/jest-dom'
 
 describe('<FavoriteNumber />', () => {
@@ -13,7 +14,7 @@ describe('<FavoriteNumber />', () => {
   test('entering an invalide value triggers an error message', () => {
     const { getByLabelText, getByRole } = render(<FavoriteNumber />)
     const input = getByLabelText(/Favorite Number/i)
-    fireEvent.change(input, { target: { value: 20 } })
+    user.type(input, '20')
     const alert = getByRole('alert')
     expect(alert).toHaveTextContent(/the number is invalid/i)
   })
