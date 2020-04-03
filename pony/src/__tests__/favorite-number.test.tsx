@@ -12,10 +12,13 @@ describe('<FavoriteNumber />', () => {
   })
 
   test('entering an invalide value triggers an error message', () => {
-    const { getByLabelText, getByRole } = render(<FavoriteNumber />)
+    const { getByLabelText, getByRole, rerender, debug } = render(<FavoriteNumber />)
     const input = getByLabelText(/Favorite Number/i)
     user.type(input, '20')
     const alert = getByRole('alert')
     expect(alert).toHaveTextContent(/the number is invalid/i)
+    debug()
+    rerender(<FavoriteNumber max={30} />)
+    debug()
   })
 })
