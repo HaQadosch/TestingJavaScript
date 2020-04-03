@@ -1,12 +1,12 @@
 import React from 'react'
 import { FavoriteNumber } from '../favorite-number';
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom'
 
 describe('<FavoriteNumber />', () => {
   test('renders an input with a label "Favorite Number"', () => {
-    const { getByText, container } = render(<FavoriteNumber />)
-    getByText(/Favorite Number/)
-    const input = container.querySelector('input')
-    expect(input.type).toBe('number')
+    const { getByLabelText } = render(<FavoriteNumber />)
+    const input = getByLabelText(/Favorite Number/i)
+    expect(input).toHaveAttribute('type', 'number')
   })
 })
