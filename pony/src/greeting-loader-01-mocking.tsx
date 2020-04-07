@@ -3,11 +3,11 @@ import { loadGreeting } from './api'
 
 export const GreetingLoader: React.FC = () => {
   const [greeting, setGreeting] = React.useState('')
-  async function loadGreetingForInput (e) {
+  async function loadGreetingForInput (e: React.FormEvent<HTMLFormElement>): void {
     e.preventDefault()
-    const { data } = await loadGreeting(e.target.elements.name.value)
-    console.log({ data })
-    setGreeting(data.greeting)
+
+    const { data: { greeting } } = await loadGreeting(e.target.elements.name.value)
+    setGreeting(greeting)
   }
   return (
     <form onSubmit={ loadGreetingForInput }>
